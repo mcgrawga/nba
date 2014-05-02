@@ -13,15 +13,14 @@
 		font-size:20px; 
 }
 #bracket_container {
-	//width: 1510px;
-	width: 1675px;
+	width: 900px;
 	margin-left: 40px;
 	margin-right: 40px;
 	padding-top: 10px;
 	padding-bottom: 30px;
 	padding-left: 40px;
 	padding-right: 10px;
-	//background: #EEEEEE;
+	background: #EEEEEE;
 	//border: 1px solid #999;
 	border-radius: 8px;
 }
@@ -38,12 +37,12 @@
 }
 .team_block_col1 { 
 	width: 165px;
-	height: 15px;
+	height: 25px;
 	position: relative; 
 }
 .team_block { 
-	width: 115px;
-	height: 15px;
+	width: 145px;
+	height: 25px;
 	position: relative; 
 }
 .bottom_border { 
@@ -108,11 +107,12 @@
     position: absolute; 
     bottom: 0; 
 		//cursor: pointer; 
-		font-size:10px; 
+		font-size:16px; 
     font-style: italic; 
     padding-left:5px; 
-		#color:#303030;
-		color:black;
+		color:#090909;
+		//color:#333;
+		//color:black;
 }
 
 .seat 
@@ -144,10 +144,6 @@
 		color:#161616;
 }
 
-/*
-.team_name_bottom_right
-{ position: absolute; right: 0; bottom: 0; }
-*/
 
 
 
