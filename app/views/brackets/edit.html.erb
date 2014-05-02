@@ -1,5 +1,5 @@
 <%content_for :title do%>Edit Bracket<%end%>
-<h1 id="bracket_title">2014 NCAA Men's Basketball Tournament Bracket (<%=@bracket.user.pool_name.titleize%>)</h1>
+<h1 id="bracket_title">2014 NBA Playoff Bracket (<%=@bracket.user.pool_name.titleize%>)</h1>
 <% if @cutoffdate.present? %>
 	<h3 id="bracket_group_title">Bracket must be completed by <%= @cutoffdate.dt_time.strftime("%B %d, %I:%M %p") %></h3>
 <% end %>
@@ -21,38 +21,28 @@
     </div>
   <% end %>
 
-<% (1..64).each do |n|  %>
+<% (1..16).each do |n|  %>
   <% field_name = 'round2_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..32).each do |n|  %>
+<% (1..8).each do |n|  %>
   <% field_name = 'round3_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..16).each do |n|  %>
+<% (1..4).each do |n|  %>
   <% field_name = 'round4_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..8).each do |n|  %>
+<% (1..2).each do |n|  %>
   <% field_name = 'round5_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..4).each do |n|  %>
-  <% field_name = 'round6_team' + n.to_s %>
-  <%= f.hidden_field field_name %>
-<% end  %>
-
-<% (1..2).each do |n|  %>
-  <% field_name = 'round7_team' + n.to_s %>
-  <%= f.hidden_field field_name %>
-<% end  %>
-
 <% (1..1).each do |n|  %>
-  <% field_name = 'round8_team' + n.to_s %>
+  <% field_name = 'round6_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 

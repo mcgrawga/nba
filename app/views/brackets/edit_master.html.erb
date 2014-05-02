@@ -1,5 +1,5 @@
 <%content_for :title do%>Edit Master Bracket<%end%>
-<h1 id="bracket_title">2014 NCAA Men's Basketball Tournament Bracket</h1>
+<h1 id="bracket_title">2014 NBA Playoff Bracket</h1>
 <h2 id="master_bracket_title">MASTER BRACKET</h1>
 <br>
 <%= render "bracket" %>
@@ -19,38 +19,28 @@
 
 <%= f.hidden_field :id %>
 
-<% (1..64).each do |n|  %>
+<% (1..16).each do |n|  %>
   <% field_name = 'round2_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..32).each do |n|  %>
+<% (1..8).each do |n|  %>
   <% field_name = 'round3_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..16).each do |n|  %>
+<% (1..4).each do |n|  %>
   <% field_name = 'round4_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..8).each do |n|  %>
+<% (1..2).each do |n|  %>
   <% field_name = 'round5_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 
-<% (1..4).each do |n|  %>
-  <% field_name = 'round6_team' + n.to_s %>
-  <%= f.hidden_field field_name %>
-<% end  %>
-
-<% (1..2).each do |n|  %>
-  <% field_name = 'round7_team' + n.to_s %>
-  <%= f.hidden_field field_name %>
-<% end  %>
-
 <% (1..1).each do |n|  %>
-  <% field_name = 'round8_team' + n.to_s %>
+  <% field_name = 'round6_team' + n.to_s %>
   <%= f.hidden_field field_name %>
 <% end  %>
 

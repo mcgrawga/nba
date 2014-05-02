@@ -28,7 +28,7 @@ class RegistrationsController < Devise::RegistrationsController
     def duplicate_master_bracket(mb)
       b = Bracket.new
       #mb = Bracket.find(0)
-      (1..64).each do |i|
+      (1..16).each do |i|
         col_name = 'round2_team' + i.to_s
         b[col_name] = mb.send(col_name)
       end

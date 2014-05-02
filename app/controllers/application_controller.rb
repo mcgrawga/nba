@@ -26,34 +26,24 @@ class ApplicationController < ActionController::Base
 
   def calc_points (pb, mb)  #player_bracket, master_bracket.  Returns current points for a players bracket.
     points = 0
-    (1..32).each do |t|
+    (1..8).each do |t|
       col_name = 'round3_team' + t.to_s
       points = points + 1 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
-    (1..16).each do |t|
+    (1..4).each do |t|
       col_name = 'round4_team' + t.to_s
       points = points + 2 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
-    (1..8).each do |t|
+    (1..2).each do |t|
       col_name = 'round5_team' + t.to_s
       points = points + 4 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
-    (1..4).each do |t|
+    (1..1).each do |t|
       col_name = 'round6_team' + t.to_s
       points = points + 6 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
-    end
-
-    (1..2).each do |t|
-      col_name = 'round7_team' + t.to_s
-      points = points + 8 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
-    end
-
-    (1..1).each do |t|
-      col_name = 'round8_team' + t.to_s
-      points = points + 10 if pb.send(col_name) == mb.send(col_name) && mb.send(col_name) != nil
     end
 
     return points
