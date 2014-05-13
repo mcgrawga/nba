@@ -32,10 +32,17 @@
 
 
     <div class="container theme-showcase" role="main">
-    <div class="jumbotron"> 
-		  	<%= yield %>
+    	<div class="jumbotron"> 
+		  		<%= yield %>
+			</div>
 		</div>
-		<br>
-		<br>
 </body>
+    <div id="footer">
+      <div class="footer_content float_left text-muted">
+        &copy; <%= Time.now.year %> PlayoffPoolz.com all rights reserved.
+      </div>
+      <div class="footer_content float_right text-muted">
+        Contact us at <a href="mailto:support@.playoffpoolz.com">support@playoffpoolz.com</a>
+      </div>
+    </div>
 </html>
